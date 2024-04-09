@@ -22,6 +22,6 @@
   filter: brightness(60%) saturate(200%) contrast(130%);
 }
 
-.contrast_filter {
-  filter: contrast(140%);
+.saturate_filter {
+  filter: saturate(390%)
 }
