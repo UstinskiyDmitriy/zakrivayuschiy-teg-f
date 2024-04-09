@@ -35,7 +35,7 @@
     ),
     repeating-linear-gradient(
       to bottom,
-      var(--background-color-start)0.01%,
+      var(--background-color-start) 0.01%,
       var(--background-color-end)
     );
   background-attachment: fixed;
@@ -114,7 +114,7 @@
 }
 
 .theme-menu__button:disabled::before {
-  content: '▶';
+  content: "▶";
   position: absolute;
   left: -15px;
 }
@@ -134,7 +134,7 @@
 }
 
 .theme-menu__button:after {
-  content: '';
+  content: "";
   display: block;
   width: 100%;
   background-color: var(--text-color);
@@ -154,8 +154,6 @@
   gap: 50px;
   margin-block-start: 11vh;
 }
-
-
 
 .section {
   display: inherit;
@@ -190,7 +188,7 @@
 
 .card__img {
   display: block;
-  object-fit:cover;
+  object-fit: cover;
   object-position: center;
 }
 
@@ -205,11 +203,11 @@
   opacity: 0.5;
   mix-blend-mode: hard-light;
   text-shadow: 0 -1px var(--label-stroke-color), 1px 0 var(--label-stroke-color),
-  0 -1px var(--label-stroke-color), -1px 0 var(--label-stroke-color);
+    0 -1px var(--label-stroke-color), -1px 0 var(--label-stroke-color);
 }
 
-@supports (text-stroke: 1px var(--label-stroke-color)) or 
-(-webkit-text-stroke: 1px var(--label-stroke-color)) {
+@supports (text-stroke: 1px var(--label-stroke-color)) or
+  (-webkit-text-stroke: 1px var(--label-stroke-color)) {
   .img__label {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--label-stroke-color);
@@ -226,7 +224,7 @@
   text-wrap: wrap;
 }
 
-@media(width <= 376px) {
+@media (width <= 376px) {
   .card__text-container {
     padding: 26px 26px;
     gap: 24.5px;
@@ -250,7 +248,7 @@
 }
 
 .button::before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 0;
@@ -258,7 +256,7 @@
   width: 100%;
   height: 100%;
   background: var(--text-color);
-  transition: 0.5s ease-in-out; 
+  transition: 0.5s ease-in-out;
   transform: translateX(-100%);
   z-index: 0;
 }
@@ -274,7 +272,6 @@
 .button:focus-visible {
   box-shadow: 2px 2px 0 0 var(--text-color);
 }
-
 
 .card__like__button-container {
   display: flex;
