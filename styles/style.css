@@ -18,29 +18,10 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   color: var(--text-color);
-  font-variation-settings: var(--text-font-weight);
-  background-image: repeating-linear-gradient(
-    to right,
-    var(--background-color),
-    var(--background-color) 2px,
-    transparent 2px,
-    transparent 4px
-  ),
-  repeating-linear-gradient(
-    to bottom,
-    var(--background-color-start),
-    var(--background-color-end) 2px,
-    transparent 2px,
-    transparent 4px
-  ),
-  repeating-linear-gradient(
-    to bottom,
-    var(--background-color-start) 0.01%,
-    var(--background-color-end)
-  );
+  font-variation-settings: 'wght' var(--text-font-weight);
+  background-image: var(--background-image);
   background-attachment: fixed;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .header {
@@ -49,7 +30,7 @@
   text-align: center;
   margin: 10.4vh 0 0;
   padding: 14vh 0 0;
-  border: 2px solid #000;
+  border: 2px solid var(--stroke-color);
 }
 
 @media (width <= 376px) {
@@ -155,7 +136,7 @@
   display: flex;
   flex-direction: column;
   gap: 54px;
-  margin-block-start: 11vh;
+  margin-block-start: 10.8vh;
 }
 
 @media (width <= 376px) {
@@ -172,7 +153,7 @@
 
 @media (width <= 376px) {
   .section {
-    gap: 54px;
+    gap: 52px;
     padding: 0 2px;
   }
 }
@@ -184,7 +165,7 @@
 
 .card__title {
   font-size: 18px;
-  font-variation-settings: var(--title-font-weight);
+  font-variation-settings: 'wght' var(--title-font-weight);
   padding: 3px 10px;
   line-height: 21px;
 }
@@ -192,6 +173,7 @@
 @media (width <= 376px) {
   .card__title {
     padding: 5px 10px;
+    line-height: 21.8px;
   }
 }
 
@@ -232,28 +214,33 @@
 }
 
 .card__text-container {
-  padding: 25.2px 27px;
+  padding: 25px 25px;
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 26.5px;
   font-size: 18px;
   line-height: 21px;
-  
 }
 
 @media (width <= 376px) {
   .card__text-container {
-    padding: 25px 26px;
-    gap: 26.5px;
+    padding: 25px 25px;
   }
 }
 
+@media (width <= 376px) {
+  .card:nth-child(7) .card__text-container{
+  padding: 25px 26px;
+}
+}
 .button {
   font-family: var(--accent-font);
   font-size: 14px;
   font-weight: var(--text-font-weight);
   background: none;
   border: 2px solid var(--stroke-color);
+  color: var(--mix-blend-color);
+  transition: 0.5s ease-in-out;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -348,6 +335,7 @@
 .floppy-image {
   width: 21px;
   height: 21px;
+  mix-blend-mode: difference;
 }
 
 @media (width <= 376px) {
