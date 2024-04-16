@@ -213,6 +213,13 @@
   }
 }
 
+@media (width <= 376px) {
+  .img__label {
+    top: 22px;
+    right: 11px;
+  }
+}
+
 .card__text-container {
   padding: 25px 25px;
   display: flex;
@@ -242,7 +249,7 @@
   background: none;
   border: 2px solid var(--stroke-color);
   color: var(--mix-blend-color);
-  transition: 0.5s ease-in-out;
+  transition: 0.3s ease;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -293,6 +300,7 @@
   width: 39px;
   height: 36px;
   cursor: pointer;
+  transition: 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -301,7 +309,6 @@
 
 .card__icon-button:focus-visible {
   outline: 2px solid var(--stroke-color);
-  transition: 0.3s ease;
 }
 
 .like-icon {
